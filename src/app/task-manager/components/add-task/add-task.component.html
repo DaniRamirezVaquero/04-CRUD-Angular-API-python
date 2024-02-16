@@ -1,0 +1,17 @@
+<h2>Agregar</h2>
+<form [formGroup]="form" action="">
+  <input type="text" class="form-control input" placeholder="Nombre" formControlName="name">
+  <input type="date" class="form-control input" placeholder="Fecha" formControlName="date">
+  <input [disabled]="form.invalid" type="button" class="btn btn-primary" value="Enviar" (click)="submit()">
+  <input type="button" class="btn btn-info mt-2" value="Random Task" (click)="randomTask()">
+  <span class="validationError" *ngFor="let error of errorsToArray(form.controls['name'].errors)">
+    <ng-container [ngSwitch]="error">
+      <ng-container *ngSwitchCase="'minlength'">
+        El nombre debe tener al menos 3 caracteres
+      </ng-container>
+      <ng-container *ngSwitchDefault>
+        Error desconocido
+      </ng-container>
+    </ng-container>
+  </span>
+</form>

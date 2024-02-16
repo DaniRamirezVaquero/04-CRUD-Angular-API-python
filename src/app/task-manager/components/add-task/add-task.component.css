@@ -1,0 +1,22 @@
+:host {
+  display: block;
+}
+
+.input {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.btn {
+  width: 100%;
+}
+
+.required {
+  color: red;
+}
+
+.spanErr {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}

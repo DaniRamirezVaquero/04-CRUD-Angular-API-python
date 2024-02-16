@@ -1,0 +1,22 @@
+<h2>Listado</h2>
+<ul class="mt-2 list-group">
+  <li *ngFor="let task of taskList;
+            let isOdd=odd;
+            let isEven=even;
+            let isFirst=first;
+            let isLast=last;" class="list-group-item" [ngClass]="{
+            'list-group-item-dark': isLast,
+            'list-group-item-success': isFirst,
+            'list-group-item-primary': isEven,
+            'list-group-item-secondary': isOdd
+        }">
+    <div><strong>Tarea: </strong><span>{{ task.name }}</span></div>
+    <div><strong>Fecha: </strong><span>{{ task.date | date:'dd/MM/yyyy' }}</span></div>
+    <div class="btns">
+      <input type="button" class="btn btn-success" value="Completar" (click)="completeTask(task)">
+      <input type="button" class="btn btn-info" value="Actualizar" (click)="updateTask(task)">
+      <input type="button" class="btn btn-danger" value="Eliminar" (click)="deleteTask(task.id)">
+    </div>
+  </li>
+  <span *ngIf="taskList.length === 0"><strong>No hay tareas pendientes</strong></span>
+</ul>

@@ -1,0 +1,12 @@
+<header>
+  <h2>Tareas realizadas</h2>
+  <ul class="mt-2 list-group">
+    <li *ngFor="let doneTask of doneTasksList;"
+    class="list-group-item list-group-item-success">
+    <div><strong>Tarea: </strong><span>{{ doneTask.name }}</span></div>
+    <div><strong>Fecha: </strong><span>{{ doneTask.date | date:'dd/MM/yyyy' }}</span></div>
+    <input type="button" class="btn btn-primary" value="Listar" (click)="recoverDoneTask(doneTask)">
+    <input type="button" class="btn btn-danger" value="Eliminar" (click)="deleteDoneTask(doneTask.id)">
+    </li>
+  </ul>
+</header>

@@ -1,0 +1,25 @@
+.input {
+  margin-bottom: 10px;
+  width: 300px;
+  font-size: 18px;
+}
+
+header {
+  color: whitesmoke;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.mcol {
+  display: flex;
+  flex-direction: column;
+}
+
+.mrow {
+  display: grid;
+  grid-template-columns: 400px 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0 30px 0 30px;
+}
