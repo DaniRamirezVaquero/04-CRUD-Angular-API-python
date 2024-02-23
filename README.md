@@ -1,26 +1,9 @@
 # 04CRUDAngularAPIPython
+En este proyecto tenemos una aplicación basica sobre un todoList con acceso a API a través de Python
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
-
-## Development server
-
-Run `docker-compose up` to create the container and the database for the API
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
+## Como hacer esto funcionar
+El proyecto está preparado para que simplemente haya que hacer ```docker-compose up``` es ya nos crea el entorno dockerizado para nuestra base de datos.
+Luego simplemente haremos ```ng serve``` como de costumbre
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
